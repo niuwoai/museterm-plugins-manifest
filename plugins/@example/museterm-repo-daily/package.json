@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Fill in git status, recent commits, or the current branch. Nothing is executed.",
   "license": "LicenseRef-MuseTerm-Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niuwoai/museterm-plugin-repo-daily.git"
+  },
   "private": true,
   "type": "module",
   "engines": {

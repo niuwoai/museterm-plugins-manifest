@@ -35,12 +35,15 @@ test("index.json names a directory and the same version", () => {
     assert.equal(typeof entry.name, "string")
     assert.equal(typeof entry.version, "string")
     assert.equal(typeof entry.description, "string")
+    assert.match(entry.repository, /^niuwoai\/[a-z0-9-]+$/)
     assert.equal(seen.has(entry.name), false)
     seen.add(entry.name)
-    const packageFile = join(root, "plugins", ...entry.name.split("/"), "package.json")
-    const packageValue = JSON.parse(readFileSync(packageFile, "utf8"))
+    const packageDir = join(root, "plugins", ...entry.name.split("/"))
+    const packageValue = JSON.parse(readFileSync(join(packageDir, "package.json"), "utf8"))
     assert.equal(packageValue.name, entry.name)
     assert.equal(packageValue.version, entry.version)
+    assert.equal(packageValue.repository.url, `git+https://github.com/${entry.repository}.git`)
+    statSync(join(packageDir, "dist", "index.js"))
   }
 })
 

@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Local troubleshooting phrases. Matches the request text only, with no directory and no network.",
   "license": "LicenseRef-MuseTerm-Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niuwoai/museterm-plugin-troubleshoot.git"
+  },
   "private": true,
   "type": "module",
   "engines": {

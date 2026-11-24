@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Remember the metadata of the last saved recording and show it from the palette.",
   "license": "LicenseRef-MuseTerm-Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niuwoai/museterm-plugin-recording-ledger.git"
+  },
   "private": true,
   "type": "module",
   "engines": {
