@@ -1,0 +1,17 @@
+[
+  {
+    "name": "@example/museterm-repo-daily",
+    "version": "0.1.0",
+    "description": "本仓库的日常命令：状态、最近提交、分支。只填入一行，不执行。"
+  },
+  {
+    "name": "@example/museterm-troubleshoot",
+    "version": "0.1.0",
+    "description": "本地排查短语。只根据请求文本给出候选，不读目录，不联网。"
+  },
+  {
+    "name": "@example/museterm-recording-ledger",
+    "version": "0.1.0",
+    "description": "录制保存后记下允许的元数据，并在命令面板里显示最近一条。"
+  }
+]

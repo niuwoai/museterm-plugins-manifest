@@ -1,0 +1,19 @@
+{
+  "name": "museterm-plugins-manifest",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MuseTerm 插件索引。校验 index.json 与各插件清单，不发布。",
+  "license": "LicenseRef-MuseTerm-Proprietary",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/index.test.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "@niuwoai/museterm-plugin": "file:../museterm/museterm/npm/museterm-plugin",
+    "typescript": "7.0.2"
+  }
+}

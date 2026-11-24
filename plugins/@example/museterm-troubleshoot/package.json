@@ -1,0 +1,48 @@
+{
+  "name": "@example/museterm-troubleshoot",
+  "version": "0.1.0",
+  "description": "Local troubleshooting phrases. Matches the request text only, with no directory and no network.",
+  "license": "LicenseRef-MuseTerm-Proprietary",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  },
+  "museterm": {
+    "schemaVersion": 1,
+    "engines": {
+      "museterm": ">=1.263.0-rc1"
+    },
+    "entry": "dist/index.js",
+    "displayName": {
+      "en": "Troubleshoot",
+      "zh-Hans": "本地排查"
+    },
+    "permissions": ["palette", "ai.suggest"],
+    "commands": [
+      {
+        "id": "phrases",
+        "title": {
+          "en": "Phrase count",
+          "zh-Hans": "短语数量"
+        },
+        "subtitle": {
+          "en": "How many local phrases are built in",
+          "zh-Hans": "内置了多少条本地短语"
+        },
+        "symbol": "text.magnifyingglass",
+        "priority": 10,
+        "export": "phraseCount"
+      }
+    ],
+    "ai": {
+      "suggest": "suggest"
+    }
+  }
+}

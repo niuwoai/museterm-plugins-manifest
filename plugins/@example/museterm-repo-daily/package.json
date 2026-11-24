@@ -1,0 +1,73 @@
+{
+  "name": "@example/museterm-repo-daily",
+  "version": "0.1.0",
+  "description": "Fill in git status, recent commits, or the current branch. Nothing is executed.",
+  "license": "LicenseRef-MuseTerm-Proprietary",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  },
+  "museterm": {
+    "schemaVersion": 1,
+    "engines": {
+      "museterm": ">=1.263.0-rc1"
+    },
+    "entry": "dist/index.js",
+    "displayName": {
+      "en": "Repo daily",
+      "zh-Hans": "仓库日常"
+    },
+    "permissions": ["palette", "terminal.fill"],
+    "commands": [
+      {
+        "id": "status",
+        "title": {
+          "en": "Working tree",
+          "zh-Hans": "工作区状态"
+        },
+        "subtitle": {
+          "en": "git status --short",
+          "zh-Hans": "git status --short"
+        },
+        "symbol": "list.bullet.rectangle",
+        "priority": 40,
+        "export": "showStatus"
+      },
+      {
+        "id": "recent",
+        "title": {
+          "en": "Recent commits",
+          "zh-Hans": "最近提交"
+        },
+        "subtitle": {
+          "en": "git log -5 --oneline",
+          "zh-Hans": "git log -5 --oneline"
+        },
+        "symbol": "clock.arrow.circlepath",
+        "priority": 30,
+        "export": "showRecent"
+      },
+      {
+        "id": "branch",
+        "title": {
+          "en": "Current branch",
+          "zh-Hans": "当前分支"
+        },
+        "subtitle": {
+          "en": "git branch --show-current",
+          "zh-Hans": "git branch --show-current"
+        },
+        "symbol": "arrow.triangle.branch",
+        "priority": 20,
+        "export": "showBranch"
+      }
+    ]
+  }
+}
